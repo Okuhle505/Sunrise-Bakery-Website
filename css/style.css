@@ -1,0 +1,382 @@
+/*
+    Sunrise Bakery - Part 2 stylesheet
+    This file provides visual styling and responsive layouts only.
+    No JavaScript, animation, interactive maps, or Part 3 features are included.
+*/
+
+:root {
+    --cream: #fff8ed;
+    --paper: #ffffff;
+    --sunrise-gold: #f5b642;
+    --warm-orange: #d96d25;
+    --deep-brown: #4b2e1f;
+    --soft-brown: #775143;
+    --line: #e7d5c4;
+    --text: #2f241f;
+    --muted-text: #625149;
+    --focus: #0e5a70;
+    --shadow: 0 0.35rem 1rem rgba(75, 46, 31, 0.12);
+}
+
+/* Base styles keep spacing and sizing consistent across every page. */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    background: #f1e3d4;
+}
+
+a {
+    color: #8b3f12;
+    font-weight: 700;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--deep-brown);
+    text-decoration-thickness: 0.16rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 0.2rem solid var(--focus);
+    outline-offset: 0.2rem;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+figure {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--deep-brown);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: clamp(1.45rem, 3vw, 2.1rem);
+    margin-bottom: 0.55em;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.4em;
+}
+
+ul {
+    padding-left: 1.35rem;
+}
+
+li + li {
+    margin-top: 0.45rem;
+}
+
+/* Header and navigation use Flexbox for a clear desktop layout. */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding: 1.1rem max(5vw, 1.25rem);
+    background: var(--paper);
+    border-bottom: 0.25rem solid var(--sunrise-gold);
+}
+
+header > p {
+    margin: 0;
+}
+
+header > p:first-child a {
+    color: var(--deep-brown);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.75rem;
+    text-decoration: none;
+}
+
+header > p:nth-child(2) {
+    color: var(--muted-text);
+    font-style: italic;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.55rem 0.85rem;
+    border: 0.1rem solid transparent;
+    border-radius: 0.35rem;
+    color: var(--deep-brown);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    border-color: var(--warm-orange);
+    background: #fff0d8;
+}
+
+nav a:active {
+    background: var(--sunrise-gold);
+}
+
+nav a[aria-current="page"] {
+    background: var(--deep-brown);
+    color: var(--paper);
+}
+
+/* Main content and card-style content areas. */
+main {
+    width: min(92%, 75rem);
+    margin: 2rem auto;
+    display: grid;
+    gap: 1.5rem;
+}
+
+main > section,
+main > form {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background: var(--paper);
+    border: 0.08rem solid var(--line);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+main > section:first-child img {
+    margin: 1.25rem 0;
+    min-height: 12rem;
+    object-fit: cover;
+}
+
+/* Product categories become a Grid layout on wider screens. */
+main:has(#products-heading) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main:has(#products-heading) > section:first-child,
+main:has(#products-heading) > section:last-child {
+    grid-column: 1 / -1;
+}
+
+/* Contact locations become two equal columns on desktop. */
+section[aria-labelledby="locations-heading"] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+section[aria-labelledby="locations-heading"] > h2 {
+    grid-column: 1 / -1;
+}
+
+article {
+    padding: 1.25rem;
+    background: #fffaf3;
+    border: 0.08rem solid var(--line);
+    border-radius: 0.5rem;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+}
+
+figure {
+    margin: 1rem 0 0;
+}
+
+figcaption {
+    margin-top: 0.55rem;
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+/* Forms have clear labels and generous touch-friendly controls. */
+form {
+    max-width: 48rem;
+}
+
+fieldset {
+    margin: 0 0 1.25rem;
+    padding: 1.25rem;
+    border: 0.1rem solid var(--line);
+    border-radius: 0.5rem;
+}
+
+legend {
+    padding: 0 0.4rem;
+    color: var(--deep-brown);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+}
+
+label {
+    color: var(--deep-brown);
+    font-weight: 700;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    margin-top: 0.3rem;
+    padding: 0.7rem;
+    border: 0.1rem solid var(--soft-brown);
+    border-radius: 0.3rem;
+    background: var(--paper);
+    color: var(--text);
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 0.75rem 1.1rem;
+    border: 0.12rem solid var(--deep-brown);
+    border-radius: 0.35rem;
+    background: var(--warm-orange);
+    color: var(--paper);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+button:hover,
+button:focus-visible {
+    background: var(--deep-brown);
+}
+
+button:active {
+    background: #2e1b12;
+}
+
+/* Footer uses Flexbox and remains easy to scan. */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding: 1.25rem max(5vw, 1.25rem);
+    background: var(--deep-brown);
+    color: var(--cream);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ffe0a2;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: var(--paper);
+}
+
+/* Tablet breakpoint: retain a roomy layout while reducing product columns. */
+@media (max-width: 62rem) {
+    main:has(#products-heading) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main:has(#products-heading) > section:first-child,
+    main:has(#products-heading) > section:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile breakpoint: change all multi-column sections to one column. */
+@media (max-width: 45rem) {
+    header,
+    footer {
+        display: block;
+    }
+
+    header > p + p {
+        margin-top: 0.35rem;
+    }
+
+    nav {
+        margin-top: 0.85rem;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+
+    footer p + p {
+        margin-top: 0.5rem;
+    }
+
+    main {
+        width: min(94%, 75rem);
+        margin: 1.25rem auto;
+        gap: 1rem;
+    }
+
+    main:has(#products-heading),
+    section[aria-labelledby="locations-heading"] {
+        grid-template-columns: 1fr;
+    }
+
+    main:has(#products-heading) > section,
+    section[aria-labelledby="locations-heading"] > h2 {
+        grid-column: auto;
+    }
+
+    main > section,
+    main > form,
+    article,
+    fieldset {
+        padding: 1rem;
+    }
+}
