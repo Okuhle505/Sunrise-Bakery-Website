@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Bakery | Enquiry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Site header and shared navigation for all Sunrise Bakery pages. -->
+    <header>
+        <p><a href="index.html">Sunrise Bakery</a></p>
+        <p>Freshly baked for your everyday moments.</p>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="enquiry-heading">
+            <h1 id="enquiry-heading">Custom order enquiry</h1>
+            <p>Use this form to ask about a celebration cake, a large bakery order or product availability.</p>
+        </section>
+
+        <!-- The form structure is included in Part 1. Processing and JavaScript validation will be considered only in Part 3. -->
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Your contact details</legend>
+                <p>
+                    <label for="enquiry-name">Full name</label><br>
+                    <input type="text" id="enquiry-name" name="name">
+                </p>
+                <p>
+                    <label for="enquiry-email">Email address</label><br>
+                    <input type="email" id="enquiry-email" name="email">
+                </p>
+                <p>
+                    <label for="enquiry-phone">Phone number</label><br>
+                    <input type="tel" id="enquiry-phone" name="phone">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your bakery request</legend>
+                <p>
+                    <label for="enquiry-type">Enquiry type</label><br>
+                    <select id="enquiry-type" name="enquiry-type">
+                        <option value="">Please select</option>
+                        <option value="custom-cake">Custom celebration cake</option>
+                        <option value="large-order">Large bakery order</option>
+                        <option value="product-availability">Product availability</option>
+                        <option value="dietary-question">Dietary or allergen question</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="collection-date">Preferred collection date</label><br>
+                    <input type="date" id="collection-date" name="collection-date">
+                </p>
+                <p>
+                    <label for="collection-point">Preferred collection point</label><br>
+                    <select id="collection-point" name="collection-point">
+                        <option value="">Please select</option>
+                        <option value="rosebank">Rosebank</option>
+                        <option value="sandton">Sandton</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="enquiry-message">Tell us what you need</label><br>
+                    <textarea id="enquiry-message" name="message" rows="6" cols="40"></textarea>
+                </p>
+            </fieldset>
+            <p><button type="submit">Send enquiry</button></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sunrise Bakery | Okuhle Nyama</p>
+        <p><a href="tel:+27115550100">Call 011 555 0100</a> | <a href="mailto:riseandbake@sunrisebakery.co.za">riseandbake@sunrisebakery.co.za</a></p>
+    </footer>
+</body>
+</html>
