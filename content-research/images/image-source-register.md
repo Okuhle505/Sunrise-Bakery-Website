@@ -2,8 +2,8 @@
 
 ## Images
 
-| Placeholder filename currently referenced | Page | Image needed | Status | Harvard reference details to record |
-| --- | --- | --- | --- | --- |
+| Placeholder filename currently referenced | Page | Image needed | 
+| --- | --- | --- | 
 | `Images/Sunrise Bakery.jpeg` | `index.html` | A landscape photo of fresh bread and pastries, ideally a bakery counter or table. 
 | `Images/Sunrise Team.jpg` | `about.html` | A photo of a baker or bakery team at work.
 | `Images/Bakery Products.jpeg` | `products.html` | A clear product-range photo showing breads, pastries or celebration cakes.
@@ -12,14 +12,10 @@
 
 ## References 
 
-### Original photograph or original map graphic
+- Creative Commons 2026, *Public Domain*, viewed 25 August 2026, <https://creativecommons.org/public-domain/>.
 
-Nyama, O. 2026, *[Description of image]*, digital photograph/original graphic, unpublished, created 17 September 2026.
-
-### Image from an online source
-
-Surname, Initial. year, *Title or description of image*, [online image], Platform/website, viewed Day Month Year, &lt;URL&gt;. Licence: [licence name and URL].
-
-### Image where the creator is an organisation
-
-Organisation name year, *Title or description of image*, [online image], viewed Day Month Year, &lt;URL&gt;. Licence: [licence name and URL].
+- OpenAI (2026) Rosebank location map for Sunrise Bakery [AI-generated image]. ChatGPT. Available at: https//chatgpt.com/(accessed: 13 August 2026)
+- OpenAI (2026) Sandton location map for Sunrise Bakery [AI-generated image]. ChatGPT. Available at: https//chatgpt.com/(accessed: 13 August 2026)
+- Thamy N. (2026) Pastries displayed on a shelf in a bakery. Unsplash. Available at: https://unsplash.com/photos/pastries-displayed-0n-a-shelf-in-a-bakery-GAineoqNbbl (Accessed: 13 August 2026)
+- Hunt, J. (2023) A display case filled with pastries in a bakery. Unsplash. Available at: https://unsplash.com/photos/a-display-case-filled-with-pastries-in-a-bakery-Qbbx1z7qilA (Accessed: 13 August 2026).
+- Tarazevich, A. (n.d.) Chefs having fun with bread and bagels in a bright kitchen setting. Pexels. Available at: https://www.pexels.com/photo/man-in-blue-crew-neck-t-shirt-holding-brown-bread-6937487/ (Accessed: 13 August 2026)
