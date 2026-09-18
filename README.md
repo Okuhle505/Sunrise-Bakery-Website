@@ -104,7 +104,6 @@ SunriseBakery/
 
 ### 2026-09-17
 
-- Confirmed Okuhle Nyama as the student name displayed in this README and the website footer.
 - Added a Part 1 content-research pack, including an image requirements/source register and original-content register.
 - Prepared the Part 1 content-research pack for ZIP submission; no external images were downloaded or added.
 - Created and linked `css/style.css` on all five HTML pages for Part 2.
