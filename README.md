@@ -114,7 +114,7 @@ SunriseBakery/
 
 ## References
 
-- Creative Commons 2026, *Public Domain*, viewed 17 September 2026, <https://creativecommons.org/public-domain/>.
+- Creative Commons 2026, *Public Domain*, viewed 25 August 2026, <https://creativecommons.org/public-domain/>.
 
 - OpenAI (2026) Rosebank location map for Sunrise Bakery [AI-generated image]. ChatGPT. Available at: https//chatgpt.com/(accessed: 13 August 2026)
 - OpenAI (2026) Sandton location map for Sunrise Bakery [AI-generated image]. ChatGPT. Available at: https//chatgpt.com/(accessed: 13 August 2026)
@@ -122,6 +122,3 @@ SunriseBakery/
 - Hunt, J. (2023) A display case filled with pastries in a bakery. Unsplash. Available at: https://unsplash.com/photos/a-display-case-filled-with-pastries-in-a-bakery-Qbbx1z7qilA (Accessed: 13 August 2026).
 - Tarazevich, A. (n.d.) Chefs having fun with bread and bagels in a bright kitchen setting. Pexels. Available at: https://www.pexels.com/photo/man-in-blue-crew-neck-t-shirt-holding-brown-bread-6937487/ (Accessed: 13 August 2026) 
 
-No external images are currently used in this website. Each image placeholder must be replaced only with an original image, a CC0/public-domain image, or an image used under terms that allow this educational website use. Record every final image in `content-research/images/image-source-register.md` and add its Harvard-style reference to this list.
-
-The Part 2 stylesheet is original work created for this student project. No external CSS framework, library, font, template or code snippet was used.
