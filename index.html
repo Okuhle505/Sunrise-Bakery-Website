@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunrise Bakery | Home</title>
+    <meta name="description" content="Sunrise Bakery offers fresh bread, pastries, celebration cakes and coffee from Rosebank and Sandton collection points.">
+    <meta name="keywords" content="bakery Johannesburg, fresh bread, pastries, celebration cakes, Rosebank bakery, Sandton bakery">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sunrisebakery.co.za/">
+    <title>Sunrise Bakery | Fresh Bread, Pastries and Cakes</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Bakery",
+            "name": "Sunrise Bakery",
+            "description": "A fictional neighbourhood bakery offering fresh bread, pastries and celebration cakes.",
+            "email": "riseandbake@sunrisebakery.co.za",
+            "telephone": "+27-11-555-0100",
+            "areaServed": ["Rosebank", "Sandton", "Johannesburg"],
+            "url": "https://www.sunrisebakery.co.za/"
+        }
+    </script>
 </head>
 <body>
     <!-- Site header and shared navigation for all Sunrise Bakery pages. -->
@@ -23,10 +40,10 @@
     </header>
 
     <main>
-        <!-- Introductory hero content. The image file is a placeholder until an approved image is supplied. -->
+        <!-- Introductory hero content. -->
         <section aria-labelledby="welcome-heading">
             <h1 id="welcome-heading">Welcome to Sunrise Bakery</h1>
-            <img src="Images/Sunrise Bakery.jpeg" alt="Placeholder for a Sunrise Bakery display of fresh breads and pastries">
+            <img src="Images/Sunrise Bakery.jpeg" alt="Fresh pastries and bread displayed at Sunrise Bakery">
             <p>Sunrise Bakery is your neighbourhood stop for fresh bread, pastries, celebration cakes and a welcoming cup of coffee.</p>
             <p>Visit our Rosebank or Sandton collection point, or send us an enquiry for a cake made for your special occasion.</p>
             <p><a href="products.html">View our products</a> | <a href="enquiry.html">Ask about a custom cake</a></p>
@@ -41,11 +58,50 @@
             </ul>
         </section>
 
+        <!-- JavaScript turns these image buttons into an accessible lightbox gallery. -->
+        <section class="gallery-section" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">A taste of Sunrise Bakery</h2>
+            <p>Select an image to view it larger.</p>
+            <div class="gallery-grid">
+                <button class="gallery-item" type="button" data-full-image="Images/Sunrise Bakery.jpeg" data-caption="Fresh pastries and bread at Sunrise Bakery.">
+                    <img src="Images/Sunrise Bakery.jpeg" alt="Fresh pastries and bread displayed at Sunrise Bakery">
+                </button>
+                <button class="gallery-item" type="button" data-full-image="Images/Bakery Products.jpeg" data-caption="A selection of Sunrise Bakery products.">
+                    <img src="Images/Bakery Products.jpeg" alt="Bakery display with assorted breads, pastries and cakes">
+                </button>
+                <button class="gallery-item" type="button" data-full-image="Images/Sunrise Team.jpg" data-caption="The Sunrise Bakery team preparing baked goods.">
+                    <img src="Images/Sunrise Team.jpg" alt="Bakery team preparing bread and bagels in a bright kitchen">
+                </button>
+            </div>
+        </section>
+
         <section aria-labelledby="visit-heading">
             <h2 id="visit-heading">Plan your visit</h2>
             <p>Both collection points are open Monday to Saturday. See our <a href="contact.html">contact page</a> for opening hours, addresses and location information.</p>
         </section>
+
+        <section class="faq-section" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently asked questions</h2>
+            <details>
+                <summary>How much notice do I need for a celebration cake?</summary>
+                <p>Please allow at least three days for a custom cake. Larger or detailed orders may need additional notice.</p>
+            </details>
+            <details>
+                <summary>Can I ask about allergens?</summary>
+                <p>Yes. Use the enquiry form to tell us about your dietary question before placing an order.</p>
+            </details>
+            <details>
+                <summary>Where can I collect my order?</summary>
+                <p>Orders can be collected from Rosebank or Sandton during normal opening hours.</p>
+            </details>
+        </section>
     </main>
+
+    <dialog id="gallery-lightbox" aria-labelledby="gallery-caption">
+        <button class="dialog-close" type="button" aria-label="Close image gallery" autofocus>&times;</button>
+        <img id="lightbox-image" src="" alt="">
+        <p id="gallery-caption"></p>
+    </dialog>
 
     <!-- Shared footer with practical contact links. -->
     <footer>
