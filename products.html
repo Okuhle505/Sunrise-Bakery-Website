@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunrise Bakery | Products</title>
+    <meta name="description" content="Browse Sunrise Bakery breads, pastries, cupcakes and celebration cakes, then filter products by category or name.">
+    <meta name="keywords" content="Sunrise Bakery products, sourdough loaf, croissants, cupcakes, celebration cakes, bakery menu">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sunrisebakery.co.za/products.html">
+    <title>Sunrise Bakery Products | Bread, Pastries and Cakes</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <!-- Site header and shared navigation for all Sunrise Bakery pages. -->
@@ -26,33 +31,70 @@
         <section aria-labelledby="products-heading">
             <h1 id="products-heading">Our products</h1>
             <p>Our selection changes with the season and is prepared for collection at our two bakery points. Please contact us if you need information about ingredients or availability.</p>
-            <img src="Images/Bakery Products.jpeg" alt="Placeholder for Sunrise Bakery breads, pastries and cakes">
+            <img src="Images/Bakery Products.jpeg" alt="Bakery display with assorted breads, pastries and cakes">
         </section>
 
-        <!-- Product categories provide the core content for this Part 1 products page. -->
-        <section aria-labelledby="bread-heading">
-            <h2 id="bread-heading">Breads and rolls</h2>
-            <ul>
-                <li>Sourdough loaf</li>
-                <li>Seeded wholewheat loaf</li>
-                <li>Soft white loaf</li>
-                <li>Plain and sesame dinner rolls</li>
-            </ul>
-        </section>
-
-        <section aria-labelledby="pastry-heading">
-            <h2 id="pastry-heading">Pastries and sweet treats</h2>
-            <ul>
-                <li>Butter croissants and pain au chocolat</li>
-                <li>Cinnamon buns and fruit muffins</li>
-                <li>Vanilla, chocolate and red-velvet cupcakes</li>
-                <li>Seasonal tart slices</li>
-            </ul>
-        </section>
-
-        <section aria-labelledby="cake-heading">
-            <h2 id="cake-heading">Celebration cakes</h2>
-            <p>Choose from vanilla, chocolate or red-velvet sponge cakes. We can discuss a message, colour theme, serving size and collection date through our <a href="enquiry.html">custom-cake enquiry form</a>.</p>
+        <!-- JavaScript filters and orders the product cards below without loading another page. -->
+        <section class="product-catalog" aria-labelledby="catalog-heading">
+            <h2 id="catalog-heading">Browse our bakery selection</h2>
+            <div class="catalog-controls">
+                <p>
+                    <label for="product-search">Search products</label>
+                    <input id="product-search" type="search" placeholder="Try cake, bread or croissant">
+                </p>
+                <p>
+                    <label for="product-category">Category</label>
+                    <select id="product-category">
+                        <option value="all">All categories</option>
+                        <option value="bread">Breads and rolls</option>
+                        <option value="pastry">Pastries and sweet treats</option>
+                        <option value="cake">Celebration cakes</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="product-sort">Sort by</label>
+                    <select id="product-sort">
+                        <option value="featured">Featured</option>
+                        <option value="name">Name: A to Z</option>
+                        <option value="price-low">Price: low to high</option>
+                        <option value="price-high">Price: high to low</option>
+                    </select>
+                </p>
+            </div>
+            <p id="product-results" class="result-count" aria-live="polite">Showing 10 products.</p>
+            <div id="product-grid" class="product-grid">
+                <article class="product-card" data-category="bread" data-name="sourdough loaf" data-price="48">
+                    <h3>Sourdough loaf</h3><p>Slow-fermented crusty loaf.</p><p class="price">From R48</p>
+                </article>
+                <article class="product-card" data-category="bread" data-name="seeded wholewheat loaf" data-price="42">
+                    <h3>Seeded wholewheat loaf</h3><p>Hearty loaf with seeds.</p><p class="price">From R42</p>
+                </article>
+                <article class="product-card" data-category="bread" data-name="soft white loaf" data-price="32">
+                    <h3>Soft white loaf</h3><p>Soft everyday family loaf.</p><p class="price">From R32</p>
+                </article>
+                <article class="product-card" data-category="bread" data-name="dinner rolls" data-price="28">
+                    <h3>Dinner rolls</h3><p>Plain or sesame rolls, pack of six.</p><p class="price">From R28</p>
+                </article>
+                <article class="product-card" data-category="pastry" data-name="butter croissant" data-price="30">
+                    <h3>Butter croissant</h3><p>Buttery, flaky breakfast pastry.</p><p class="price">From R30</p>
+                </article>
+                <article class="product-card" data-category="pastry" data-name="cinnamon bun" data-price="32">
+                    <h3>Cinnamon bun</h3><p>Soft bun with warm cinnamon filling.</p><p class="price">From R32</p>
+                </article>
+                <article class="product-card" data-category="pastry" data-name="cupcake" data-price="24">
+                    <h3>Vanilla or chocolate cupcake</h3><p>Finished with a swirl of frosting.</p><p class="price">From R24</p>
+                </article>
+                <article class="product-card" data-category="pastry" data-name="seasonal tart slice" data-price="38">
+                    <h3>Seasonal tart slice</h3><p>Seasonal fruit filling in a crisp pastry case.</p><p class="price">From R38</p>
+                </article>
+                <article class="product-card" data-category="cake" data-name="celebration cake" data-price="350">
+                    <h3>Celebration cake</h3><p>Vanilla, chocolate or red-velvet sponge.</p><p class="price">From R350</p>
+                </article>
+                <article class="product-card" data-category="cake" data-name="custom cake" data-price="450">
+                    <h3>Custom cake</h3><p>Designed around your theme, message and serving size.</p><p class="price">From R450</p>
+                </article>
+            </div>
+            <p id="no-products" class="form-status" role="status" hidden>No products match your search. Try another word or category.</p>
         </section>
 
         <section aria-labelledby="allergen-heading">
