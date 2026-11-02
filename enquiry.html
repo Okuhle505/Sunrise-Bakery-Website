@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunrise Bakery | Enquiry</title>
+    <meta name="description" content="Send Sunrise Bakery a custom cake, product availability or large-order enquiry for Rosebank or Sandton collection.">
+    <meta name="keywords" content="custom cake enquiry, bakery order Johannesburg, Rosebank cake, Sandton cake, Sunrise Bakery">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sunrisebakery.co.za/enquiry.html">
+    <title>Make a Bakery Enquiry | Sunrise Bakery</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <!-- Site header and shared navigation for all Sunrise Bakery pages. -->
@@ -29,20 +34,20 @@
         </section>
 
         <!-- The form structure is included in Part 1. Processing and JavaScript validation will be considered only in Part 3. -->
-        <form action="#" method="post">
+        <form id="enquiry-form" action="enquiry.html" method="post" novalidate>
             <fieldset>
                 <legend>Your contact details</legend>
                 <p>
                     <label for="enquiry-name">Full name</label><br>
-                    <input type="text" id="enquiry-name" name="name">
+                    <input type="text" id="enquiry-name" name="name" autocomplete="name" minlength="2" maxlength="60" required>
                 </p>
                 <p>
                     <label for="enquiry-email">Email address</label><br>
-                    <input type="email" id="enquiry-email" name="email">
+                    <input type="email" id="enquiry-email" name="email" autocomplete="email" required>
                 </p>
                 <p>
                     <label for="enquiry-phone">Phone number</label><br>
-                    <input type="tel" id="enquiry-phone" name="phone">
+                    <input type="tel" id="enquiry-phone" name="phone" autocomplete="tel" pattern="[0-9+() -]{10,20}" title="Enter a valid phone number with at least 10 digits." required>
                 </p>
             </fieldset>
 
@@ -50,7 +55,7 @@
                 <legend>Your bakery request</legend>
                 <p>
                     <label for="enquiry-type">Enquiry type</label><br>
-                    <select id="enquiry-type" name="enquiry-type">
+                    <select id="enquiry-type" name="enquiry-type" required>
                         <option value="">Please select</option>
                         <option value="custom-cake">Custom celebration cake</option>
                         <option value="large-order">Large bakery order</option>
@@ -60,11 +65,11 @@
                 </p>
                 <p>
                     <label for="collection-date">Preferred collection date</label><br>
-                    <input type="date" id="collection-date" name="collection-date">
+                    <input type="date" id="collection-date" name="collection-date" required>
                 </p>
                 <p>
                     <label for="collection-point">Preferred collection point</label><br>
-                    <select id="collection-point" name="collection-point">
+                    <select id="collection-point" name="collection-point" required>
                         <option value="">Please select</option>
                         <option value="rosebank">Rosebank</option>
                         <option value="sandton">Sandton</option>
@@ -72,10 +77,11 @@
                 </p>
                 <p>
                     <label for="enquiry-message">Tell us what you need</label><br>
-                    <textarea id="enquiry-message" name="message" rows="6" cols="40"></textarea>
+                    <textarea id="enquiry-message" name="message" rows="6" cols="40" minlength="15" maxlength="500" required></textarea>
                 </p>
             </fieldset>
             <p><button type="submit">Send enquiry</button></p>
+            <p id="enquiry-status" class="form-status" role="status" aria-live="polite" hidden></p>
         </form>
     </main>
 
